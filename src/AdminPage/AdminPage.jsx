@@ -70,7 +70,7 @@ class AdminPage extends React.Component {
             return <tr >
             <td scope="row">{this.Capitalize(item.firstName)} {this.Capitalize(item.lastName)}</td> 
             <td scope="row">{this.Capitalize(item.role)}</td>
-             <td> <button className="btn btn-primary btn-sm" disabled={item.role=="admin"} onClick={() => this.updateRole(item)}> Promote </button></td>
+             <td> <button className="btn btn-info btn-sm" disabled={item.role=="admin"} onClick={() => this.updateRole(item)}> Promote </button></td>
             
             <td> <button className="btn btn-danger btn-sm" onClick={() => this.deleteUser(item)}>Delete User </button></td>
           </tr>
