@@ -47,7 +47,7 @@ class CoursesPage extends React.Component {
 
     deleteUser(courseData){
       
-      fetch(`http://34.145.73.148/courses/${courseData.cId}`, {
+      fetch(`https://ecm-ae-cloudsql-dot-aesthetic-root-333115.uc.r.appspot.com/courses/${courseData.cId}`, {
           
           method: "DELETE",
           headers: { 'Content-Type': 'application/json' },
@@ -65,7 +65,7 @@ class CoursesPage extends React.Component {
     handleSubmit(event) {
       const { currentUser } = this.state;
         
-        fetch("http://34.145.73.148/courses", {
+        fetch("https://ecm-ae-cloudsql-dot-aesthetic-root-333115.uc.r.appspot.com/courses", {
             
             method: "POST",
             body: JSON.stringify({
@@ -103,7 +103,7 @@ class CoursesPage extends React.Component {
           
           userService.getCourrseById(event.target.cIds.value).then((getCName) => {
           
-        fetch("http://34.145.73.148/courses/updatestatus", {
+        fetch("https://ecm-ae-cloudsql-dot-aesthetic-root-333115.uc.r.appspot.com/courses/updatestatus", {
             
             method: "PUT",
             body: JSON.stringify({
@@ -137,7 +137,7 @@ class CoursesPage extends React.Component {
         
         userService.getCourrseById(data.cId).then((getCName) => {
         
-      fetch("http://34.145.73.148/courses/updatestatus", {
+      fetch("https://ecm-ae-cloudsql-dot-aesthetic-root-333115.uc.r.appspot.com/courses/updatestatus", {
           
           method: "PUT",
           body: JSON.stringify({
@@ -217,7 +217,7 @@ class CoursesPage extends React.Component {
         
         return (
             <div>
-                <h3>Hi <strong>{this.Capitalize(currentUser.firstName)}</strong></h3>
+                <h3>Hi <strong style={{'color':'mediumblue'}}>{this.Capitalize(currentUser.firstName)}</strong></h3>
                 <p>Your role is: <strong>{this.Capitalize(currentUser.role)}</strong>.</p>
                 <p>As per your role you can request, approve or delete the courses.</p>
                 <div>

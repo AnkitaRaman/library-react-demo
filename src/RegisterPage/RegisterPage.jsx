@@ -38,7 +38,7 @@ class RegisterPage extends React.Component {
                     onSubmit={({firstName,lastName,role,email,password }, { setStatus, setSubmitting }) => {
                         setStatus();
                         try {
-                          let res = fetch("http://34.145.73.148/user", {
+                          let res = fetch("https://ecm-ae-cloudsql-dot-aesthetic-root-333115.uc.r.appspot.com/user", {
                             
                             method: "POST",
                             body: JSON.stringify({
@@ -138,7 +138,7 @@ export { RegisterPage };
   // let handleSubmit = async (e) => {
   //   e.preventDefault();
   //   try {
-  //     let res = await fetch("http://34.145.73.148/user", {
+  //     let res = await fetch("https://ecm-ae-cloudsql-dot-aesthetic-root-333115.uc.r.appspot.com/user", {
   //       method: "POST",
   //       body: JSON.stringify({
   //         firstName: firstName,

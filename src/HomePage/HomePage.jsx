@@ -61,7 +61,7 @@ class HomePage extends React.Component {
                             
                             if(currentUser.password==oldPassword){
                                 if(newPassword==confirmPassword){
-                                fetch("http://34.145.73.148/user", {
+                                fetch("https://ecm-ae-cloudsql-dot-aesthetic-root-333115.uc.r.appspot.com/user", {
             
                                 method: "POST",
                                 body: JSON.stringify({
