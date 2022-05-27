@@ -1,4 +1,6 @@
 runtime: nodejs16
+service: ecmapp-react 
+
 handlers:
   # Serve all static files with url ending with a file extension
   - url: /(.*\..+)$
@@ -7,4 +9,4 @@ handlers:
   # Catch all handler to index.html
   - url: /.*
     static_files: dist/index.html
-    upload: dist/index.html
+    upload: dist/index.html 
