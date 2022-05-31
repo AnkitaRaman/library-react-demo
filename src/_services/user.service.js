@@ -12,20 +12,20 @@ export const userService = {
 function getAll() {
     const requestOptions = { method: 'GET', headers: authHeader() };    
 
-    return fetch(`https://ecm-ae-cloudsql-dot-aesthetic-root-333115.uc.r.appspot.com/user`, requestOptions).then(handleResponse);
+    return fetch(`http://34.145.73.148/user`, requestOptions).then(handleResponse);
 }
 
 function getById(userId) {
     const requestOptions = { method: 'GET', headers: authHeader() };
-    return fetch(`https://ecm-ae-cloudsql-dot-aesthetic-root-333115.uc.r.appspot.com/user/${userId}`, requestOptions).then(handleResponse);
+    return fetch(`http://34.145.73.148/user/${userId}`, requestOptions).then(handleResponse);
 }
 
 function getCourrseById(cId) {
     const requestOptions = { method: 'GET', headers: authHeader() };  
-    return fetch(`https://ecm-ae-cloudsql-dot-aesthetic-root-333115.uc.r.appspot.com/courses/${cId}`, requestOptions).then(handleResponse);
+    return fetch(`http://34.145.73.148/courses/${cId}`, requestOptions).then(handleResponse);
 }
 
 function getAllCourses() {
     const requestOptions = { method: 'GET', headers: authHeader() };   
-    return fetch(`https://ecm-ae-cloudsql-dot-aesthetic-root-333115.uc.r.appspot.com/courses/`, requestOptions).then(handleResponse);
+    return fetch(`http://34.145.73.148/courses/`, requestOptions).then(handleResponse);
 }

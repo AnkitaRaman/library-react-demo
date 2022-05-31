@@ -17,7 +17,7 @@ class AdminPage extends React.Component {
 
     updateRole(userData){
         
-        fetch("https://ecm-ae-cloudsql-dot-aesthetic-root-333115.uc.r.appspot.com/user", {
+        fetch("http://34.145.73.148/user", {
             
             method: "POST",
             body: JSON.stringify({
@@ -47,7 +47,7 @@ class AdminPage extends React.Component {
 
     deleteUser(userData){
         
-        fetch(`https://ecm-ae-cloudsql-dot-aesthetic-root-333115.uc.r.appspot.com/user/${userData.userId}`, {
+        fetch(`http://34.145.73.148/user/${userData.userId}`, {
             
             method: "DELETE",
             headers: { 'Content-Type': 'application/json' },

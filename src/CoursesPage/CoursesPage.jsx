@@ -47,7 +47,7 @@ class CoursesPage extends React.Component {
 
     deleteUser(courseData){
       
-      fetch(`https://ecm-ae-cloudsql-dot-aesthetic-root-333115.uc.r.appspot.com/courses/${courseData.cId}`, {
+      fetch(`http://34.145.73.148/courses/${courseData.cId}`, {
           
           method: "DELETE",
           headers: { 'Content-Type': 'application/json' },
@@ -65,7 +65,7 @@ class CoursesPage extends React.Component {
     handleSubmit(event) {
       const { currentUser } = this.state;
         
-        fetch("https://ecm-ae-cloudsql-dot-aesthetic-root-333115.uc.r.appspot.com/courses", {
+        fetch("http://34.145.73.148/courses", {
             
             method: "POST",
             body: JSON.stringify({
@@ -103,7 +103,7 @@ class CoursesPage extends React.Component {
           
           userService.getCourrseById(event.target.cIds.value).then((getCName) => {
           
-        fetch("https://ecm-ae-cloudsql-dot-aesthetic-root-333115.uc.r.appspot.com/courses/updatestatus", {
+        fetch("http://34.145.73.148/courses/updatestatus", {
             
             method: "PUT",
             body: JSON.stringify({
@@ -137,7 +137,7 @@ class CoursesPage extends React.Component {
         
         userService.getCourrseById(data.cId).then((getCName) => {
         
-      fetch("https://ecm-ae-cloudsql-dot-aesthetic-root-333115.uc.r.appspot.com/courses/updatestatus", {
+      fetch("http://34.145.73.148/courses/updatestatus", {
           
           method: "PUT",
           body: JSON.stringify({
